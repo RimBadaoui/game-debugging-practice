@@ -25,9 +25,16 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- Purpose: help the player guess a secret number by  giving them hints based on their guesses.
+- Bugs:  1. Adds 5 points to score on even attempts
+         even if the guess is incorrect. 
+         2. Sometimes converts guess into a string before comparing to the secret (logic_utils.py 60)
+         3. set status to playing when new game starts (app.py 75)
+- Fixes: 1. Made it always subtract 5 points if the 
+         outcome was too low/high for consistency (logic_utils.py 74)
+         2. convert guess to int instead of string for int comparison rather than string comparison 
+         3. set status to "playing" when new game is started so that user can play again after winning or losing.
+
 
 ## 📸 Demo
 
