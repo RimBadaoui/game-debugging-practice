@@ -9,11 +9,6 @@ It wrote the code, ran away, and now the game is unplayable.
 - The hints lie to you.
 - The secret number seems to have commitment issues.
 
-## 🛠️ Setup
-
-1. Install dependencies: `pip install -r requirements.txt`
-2. Run the broken app: `python -m streamlit run app.py`
-
 ## 🕵️‍♂️ Your Mission
 
 1. **Play the game.** Open the "Developer Debug Info" tab in the app to see the secret number. Try to win.
@@ -23,23 +18,3 @@ It wrote the code, ran away, and now the game is unplayable.
    - Run `pytest` in your terminal.
    - Keep fixing until all tests pass!
 
-## 📝 Document Your Experience
-
-- Purpose: help the player guess a secret number by  giving them hints based on their guesses.
-- Bugs:  1. Adds 5 points to score on even attempts
-         even if the guess is incorrect. 
-         2. Sometimes converts guess into a string before comparing to the secret (logic_utils.py 60)
-         3. set status to playing when new game starts (app.py 75)
-- Fixes: 1. Made it always subtract 5 points if the 
-         outcome was too low/high for consistency (logic_utils.py 74)
-         2. convert guess to int instead of string for int comparison rather than string comparison 
-         3. set status to "playing" when new game is started so that user can play again after winning or losing.
-
-
-## 📸 Demo
-
-- [ ] [Insert a screenshot of your fixed, winning game here]
-
-## 🚀 Stretch Features
-
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
